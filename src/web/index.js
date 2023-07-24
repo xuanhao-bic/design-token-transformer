@@ -1,4 +1,5 @@
 const StyleDictionary = require('style-dictionary')
+const { createColorTailwindByType } = require('../../fns')
 
 module.exports = {
   transform: {
@@ -22,7 +23,8 @@ module.exports = {
     ])
   },
   format: {
-    'custom/css': require('./formatCss')
+    'custom/css': require('./formatCss'),
+    createColorTailwindByType
   },
   action: {}
 }

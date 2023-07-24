@@ -40,24 +40,31 @@ StyleDictionary.registerFilter({
       // "custom-gradient",
       // "custom-fontStyle",
       // "custom-radius",
-      // "custom-shadow",
+      "custom-shadow",
     ].includes(token.type);
   },
 });
 
 const StyleDictionaryExtended = StyleDictionary.extend({
   ...deepMerge.all([
-    // androidConfig,
     webConfig,
   ]),
   source: ["tokens/*.json"],
-  format:{
-    createColorTailwindByType
-  },
   platforms: {
-    web : {
-      "transforms": ["attribute/cti", "name/cti/kebab", "size/px"],
-      "buildPath": "build/",
+    scss: {
+      transformGroup: "custom/css",
+      buildPath: "build/scss/",
+      files: [
+        {
+          destination: "variables.scss",
+          format: "scss/variables",
+          filter: "validToken",
+        },
+      ],
+    },
+    css: {
+      transformGroup: "custom/css",
+      buildPath: "build/css/",
       files: [
         {
           destination: "variables.css",
@@ -67,19 +74,20 @@ const StyleDictionaryExtended = StyleDictionary.extend({
             showFileHeader: false,
           },
         },
+      ],
+    },
+    tailwind : {
+      "transforms": ["attribute/cti", "name/cti/kebab"],
+      "buildPath": "build/tailwind/",
+      files: [
         {
-          destination: "variables.scss",
-          format: "scss/variables",
-          filter: "validToken",
-        },
-        {
-          "destination": `tailwind/color.json`,
+          "destination": `color.json`,
           "format": "createColorTailwindByType"
         },
       ],
     }
   },
 });
-console.log("StyleDictionaryExtended", StyleDictionaryExtended);
+// console.log("StyleDictionaryExtended", StyleDictionaryExtended);
 
 StyleDictionaryExtended.buildAllPlatforms();
