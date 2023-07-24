@@ -1,7 +1,7 @@
 const StyleDictionary = require("style-dictionary");
 const deepMerge = require("deepmerge");
 const webConfig = require("./src/web/index.js");
-const {createArray, createColorTailwindByType} = require("./fns.js");
+const { createColorTailwindByType} = require("./fns.js");
 
 StyleDictionary.registerTransform({
   name: "size/px",
@@ -52,7 +52,6 @@ const StyleDictionaryExtended = StyleDictionary.extend({
   ]),
   source: ["tokens/*.json"],
   format:{
-    createArray,
     createColorTailwindByType
   },
   platforms: {
@@ -67,10 +66,6 @@ const StyleDictionaryExtended = StyleDictionary.extend({
           options: {
             showFileHeader: false,
           },
-        },
-        {
-          "destination": `styles.json`,
-          "format": "createArray"
         },
         {
           "destination": `color.json`,

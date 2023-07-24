@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "npm run transform-tokens",
-    "transform-tokens": "node ./transformTokens.js",
+    "build": "node ./transformTokens.js",
     "test": "jest tests --coverage=false"
   },
   "repository": {
