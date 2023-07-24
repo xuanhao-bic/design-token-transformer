@@ -68,7 +68,12 @@ const StyleDictionaryExtended = StyleDictionary.extend({
           },
         },
         {
-          "destination": `color.json`,
+          destination: "variables.scss",
+          format: "scss/variables",
+          filter: "validToken",
+        },
+        {
+          "destination": `tailwind/color.json`,
           "format": "createColorTailwindByType"
         },
       ],
