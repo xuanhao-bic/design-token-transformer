@@ -12,11 +12,37 @@ function deepen(obj) {
       const part = parts.shift();
       target = target[part] = target[part] || {};
     }
-
     // Set value at end of path
     target[parts[0]] = obj[objectPath];
   }
+  return result;
+}
 
+function convertToKebabCase(obj) {
+  const result = {};
+  for (const key in obj) {
+    if (typeof obj[key] === "object" && !Array.isArray(obj[key])) {
+      const nestedObj = convertToKebabCase(obj[key]);
+      for (const nestedKey in nestedObj) {
+        result[`${key.replace(/_/g, "-")}-${nestedKey}`] = nestedObj[nestedKey];
+      }
+    } else {
+      result[key.replace(/_/g, "-")] = obj[key];
+    }
+  }
+  return result;
+}
+
+function convertSomeTypeToKebabCase(obj) {
+  const result = {};
+  for (const key in obj) {
+    // convert same type to kebab case
+    if (key === "font") {
+      result[key] = convertToKebabCase(obj[key]);
+    } else {
+      result[key] = obj[key];
+    }
+  }
   return result;
 }
 
@@ -25,21 +51,43 @@ function createArray({ dictionary, platform }) {
   return JSON.stringify(arr);
 }
 
-function filterTokensByType(type, tokens) {
+function filterTokensByType(types, tokens) {
   const obj = tokens.reduce((acc, cur) => {
-    if (cur.type === type) {
-      acc[cur.path.join(".")] = `var(--${cur.name}, ${cur.value})`;
+    if (types.includes(cur.type)) {
+      // box shadow
+      if (cur.type === "custom-shadow") {
+        acc[cur.path.join(".")] = `var(--${cur.name})`;
+      // font size and line height
+      } else if (cur.type === "custom-fontStyle") {
+        acc[cur.path.join(".")] = [
+          `${cur.value.fontSize}px`,
+          {
+            lineHeight: `${cur.value.lineHeight}px`,
+            fontWeight: cur.value.fontWeight,
+          },
+        ];
+      } else {
+        acc[cur.path.join(".")] = `var(--${cur.name}, ${cur.value})`;
+      }
     }
     return acc;
   }, {});
-
   const deep = deepen(obj);
-  return deep;
+  return convertSomeTypeToKebabCase(deep);
 }
 
-function createColorTailwindByType({ dictionary, platform }) {
+function createTailwindTokens({ dictionary, platform }) {
   const array = createArray({ dictionary, platform });
-  return JSON.stringify(filterTokensByType("color", JSON.parse(array)));
+  return JSON.stringify(
+    filterTokensByType(
+      ["color", "custom-shadow", "custom-fontStyle"],
+      JSON.parse(array)
+    )
+  );
 }
 
-module.exports = { createArray, filterTokensByType, createColorTailwindByType };
+module.exports = {
+  createArray,
+  filterTokensByType,
+  createTailwindTokens,
+};

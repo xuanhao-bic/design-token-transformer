@@ -81,8 +81,8 @@ const StyleDictionaryExtended = StyleDictionary.extend({
       "buildPath": "build/tailwind/",
       files: [
         {
-          "destination": `color.json`,
-          "format": "createColorTailwindByType"
+          "destination": 'tokens.json',
+          "format": "createTailwindTokens"
         },
       ],
     }
