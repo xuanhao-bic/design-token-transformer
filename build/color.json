@@ -1,7 +1,7 @@
 {
     "color": {
         "color-global": {
-            "white": "var(--color-color-global-white, #ffffffff)",
+            "white-1": "var(--color-color-global-white-1, #ffffffff)",
             "black": "var(--color-color-global-black, #000000ff)",
             "gray": {
                 "50": "var(--color-color-global-gray-50, #f8f9fbff)",
