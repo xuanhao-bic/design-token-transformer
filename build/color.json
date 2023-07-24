@@ -1,0 +1,131 @@
+{
+    "color": {
+        "color-global": {
+            "white": "var(--color-color-global-white, #ffffffff)",
+            "black": "var(--color-color-global-black, #000000ff)",
+            "gray": {
+                "50": "var(--color-color-global-gray-50, #f8f9fbff)",
+                "100": "var(--color-color-global-gray-100, #f2f4f6ff)",
+                "200": "var(--color-color-global-gray-200, #d5d7daff)",
+                "300": "var(--color-color-global-gray-300, #babcbeff)",
+                "400": "var(--color-color-global-gray-400, #8a8b8dff)",
+                "500": "var(--color-color-global-gray-500, #717273ff)",
+                "600": "var(--color-color-global-gray-600, #545556ff)",
+                "700": "var(--color-color-global-gray-700, #39393aff)",
+                "800": "var(--color-color-global-gray-800, #272828ff)",
+                "900": "var(--color-color-global-gray-900, #171818ff)"
+            },
+            "red": {
+                "50": "var(--color-color-global-red-50, #fff0f1ff)",
+                "100": "var(--color-color-global-red-100, #ffdadcff)",
+                "200": "var(--color-color-global-red-200, #feb3b8ff)",
+                "300": "var(--color-color-global-red-300, #fe8891ff)",
+                "400": "var(--color-color-global-red-400, #fd3545ff)",
+                "500": "var(--color-color-global-red-500, #d32431ff)",
+                "600": "var(--color-color-global-red-600, #9c1b24ff)",
+                "700": "var(--color-color-global-red-700, #72131aff)",
+                "800": "var(--color-color-global-red-800, #510e13ff)",
+                "900": "var(--color-color-global-red-900, #32080cff)"
+            },
+            "orange": {
+                "50": "var(--color-color-global-orange-50, #fff2e3ff)",
+                "100": "var(--color-color-global-orange-100, #feddb8ff)",
+                "200": "var(--color-color-global-orange-200, #feb96bff)",
+                "300": "var(--color-color-global-orange-300, #fd9015ff)",
+                "400": "var(--color-color-global-orange-400, #cb6e07ff)",
+                "500": "var(--color-color-global-orange-500, #a55a06ff)",
+                "600": "var(--color-color-global-orange-600, #794204ff)",
+                "700": "var(--color-color-global-orange-700, #572f03ff)",
+                "800": "var(--color-color-global-orange-800, #3d2102ff)",
+                "900": "var(--color-color-global-orange-900, #251401ff)"
+            },
+            "yellow": {
+                "50": "var(--color-color-global-yellow-50, #fff3d2ff)",
+                "100": "var(--color-color-global-yellow-100, #ffe08aff)",
+                "200": "var(--color-color-global-yellow-200, #fcbc0bff)",
+                "300": "var(--color-color-global-yellow-300, #daa209ff)",
+                "400": "var(--color-color-global-yellow-400, #ab7f07ff)",
+                "500": "var(--color-color-global-yellow-500, #8b6706ff)",
+                "600": "var(--color-color-global-yellow-600, #664c04ff)",
+                "700": "var(--color-color-global-yellow-700, #493603ff)",
+                "800": "var(--color-color-global-yellow-800, #332602ff)",
+                "900": "var(--color-color-global-yellow-900, #1e1701ff)"
+            },
+            "green": {
+                "50": "var(--color-color-global-green-50, #ebf6edff)",
+                "100": "var(--color-color-global-green-100, #ceead2ff)",
+                "200": "var(--color-color-global-green-200, #9cd4a3ff)",
+                "300": "var(--color-color-global-green-300, #69bd74ff)",
+                "400": "var(--color-color-global-green-400, #269a36ff)",
+                "500": "var(--color-color-global-green-500, #1f7d2cff)",
+                "600": "var(--color-color-global-green-600, #175c20ff)",
+                "700": "var(--color-color-global-green-700, #104217ff)",
+                "800": "var(--color-color-global-green-800, #0c2e10ff)",
+                "900": "var(--color-color-global-green-900, #071c0aff)"
+            },
+            "teal": {
+                "50": "var(--color-color-global-teal-50, #ebf6f4ff)",
+                "100": "var(--color-color-global-teal-100, #cde8e5ff)",
+                "200": "var(--color-color-global-teal-200, #9ad1caff)",
+                "300": "var(--color-color-global-teal-300, #67b9afff)",
+                "400": "var(--color-color-global-teal-400, #289688ff)",
+                "500": "var(--color-color-global-teal-500, #217a6fff)",
+                "600": "var(--color-color-global-teal-600, #185951ff)",
+                "700": "var(--color-color-global-teal-700, #11403aff)",
+                "800": "var(--color-color-global-teal-800, #0c2d29ff)",
+                "900": "var(--color-color-global-teal-900, #071b18ff)"
+            },
+            "blue": {
+                "50": "var(--color-color-global-blue-50, #edf4ffff)",
+                "100": "var(--color-color-global-blue-100, #d2e4ffff)",
+                "200": "var(--color-color-global-blue-200, #a6c8ffff)",
+                "300": "var(--color-color-global-blue-300, #78acffff)",
+                "400": "var(--color-color-global-blue-400, #3983f9ff)",
+                "500": "var(--color-color-global-blue-500, #2e6acbff)",
+                "600": "var(--color-color-global-blue-600, #224e95ff)",
+                "700": "var(--color-color-global-blue-700, #18386bff)",
+                "800": "var(--color-color-global-blue-800, #11274bff)",
+                "900": "var(--color-color-global-blue-900, #0a172dff)"
+            },
+            "purple": {
+                "50": "var(--color-color-global-purple-50, #f7f1feff)",
+                "100": "var(--color-color-global-purple-100, #eaddfcff)",
+                "200": "var(--color-color-global-purple-200, #d5bbf9ff)",
+                "300": "var(--color-color-global-purple-300, #c09af5ff)",
+                "400": "var(--color-color-global-purple-400, #a168f1ff)",
+                "500": "var(--color-color-global-purple-500, #8942edff)",
+                "600": "var(--color-color-global-purple-600, #662bb7ff)",
+                "700": "var(--color-color-global-purple-700, #491f84ff)",
+                "800": "var(--color-color-global-purple-800, #34165dff)",
+                "900": "var(--color-color-global-purple-900, #1f0d39ff)"
+            },
+            "pink": {
+                "50": "var(--color-color-global-pink-50, #fcf0f8ff)",
+                "100": "var(--color-color-global-pink-100, #f7daedff)",
+                "200": "var(--color-color-global-pink-200, #f7b7e2ff)",
+                "300": "var(--color-color-global-pink-300, #fa87d4ff)",
+                "400": "var(--color-color-global-pink-400, #ed4cb7ff)",
+                "500": "var(--color-color-global-pink-500, #cc1d92ff)",
+                "600": "var(--color-color-global-pink-600, #961574ff)",
+                "700": "var(--color-color-global-pink-700, #6b155aff)",
+                "800": "var(--color-color-global-pink-800, #47153fff)",
+                "900": "var(--color-color-global-pink-900, #241020ff)"
+            }
+        },
+        "color-alias": {
+            "bg-default": "var(--color-color-alias-bg-default, #ffffffff)",
+            "bg-muted": "var(--color-color-alias-bg-muted, #f8f9fbff)",
+            "bg-subdued": "var(--color-color-alias-bg-subdued, #f2f4f6ff)",
+            "bg-disabled": "var(--color-color-alias-bg-disabled, #f8f9fbff)",
+            "bg-accent": "var(--color-color-alias-bg-accent, #8942edff)",
+            "bg-accent-muted": "var(--color-color-alias-bg-accent-muted, #662bb7ff)",
+            "bg-accent-subdued": "var(--color-color-alias-bg-accent-subdued, #491f84ff)",
+            "bg-critical": "var(--color-color-alias-bg-critical, #d32431ff)",
+            "bg-caution": "var(--color-color-alias-bg-caution, #fcbc0bff)",
+            "bg-success": "var(--color-color-alias-bg-success, #1f7d2cff)",
+            "bg-emphasis-default": "var(--color-color-alias-bg-emphasis-default, #171818ff)",
+            "bg-emphasis-muted": "var(--color-color-alias-bg-emphasis-muted, #39393aff)",
+            "bg-emphasis-subdued": "var(--color-color-alias-bg-emphasis-subdued, #717273ff)"
+        }
+    }
+}
