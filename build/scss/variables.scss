@@ -1,6 +1,6 @@
 
 // Do not edit directly
-// Generated on Wed, 26 Jul 2023 09:46:04 GMT
+// Generated on Wed, 26 Jul 2023 10:18:12 GMT
 
 $color-global-white: rgb(255, 255, 255);
 $color-global-black: rgb(0, 0, 0);
@@ -136,6 +136,7 @@ $color-alias-bg-success-emphasis: rgb(16, 66, 23);
 $color-alias-border-emphasis: rgb(39, 40, 40);
 $color-alias-border-bold: rgb(57, 57, 58);
 $color-alias-border-default: rgb(186, 188, 190);
+$color-alias-border-subdued: rgb(213, 215, 218);
 $color-alias-border-muted: rgb(242, 244, 246);
 $color-alias-border-on-emphasis: rgb(255, 255, 255);
 $color-alias-border-accent-muted: rgb(213, 187, 249);
@@ -165,6 +166,12 @@ $color-button-bg-inverse-hovered: rgb(242, 244, 246);
 $color-button-bg-inverse-active: rgb(213, 215, 218);
 $color-button-bg-disabled: rgb(242, 244, 246);
 $color-button-border-focused: rgb(137, 66, 237);
+$color-button-fg-primary: rgb(137, 66, 237);
+$color-button-fg-primary-hovered: rgb(102, 43, 183);
+$color-button-fg-secondary: rgb(113, 114, 115);
+$color-button-fg-secondary-hovered: rgb(57, 57, 58);
+$color-button-fg-hyperlink: rgb(57, 131, 249);
+$color-button-fg-hyperlink-hovered: rgb(46, 106, 203);
 $color-input-fg-placeholder: rgb(186, 188, 190);
 $color-input-fg-filled: rgb(39, 40, 40);
 $color-input-fg-disabled: rgb(186, 188, 190);
