@@ -181,6 +181,10 @@
   --color-input-border-disabled: rgb(242, 244, 246);
   --color-input-border-error: rgb(253, 53, 69);
   --color-input-border-success: rgb(38, 154, 54);
+  --color-label-fg-default: rgb(23, 24, 24);
+  --color-label-fg-subdued: rgb(113, 114, 115);
+  --color-label-fg-disabled: rgb(186, 188, 190);
+  --color-label-required: rgb(253, 53, 69);
   --effect-shadow-xs: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
   --effect-shadow-sm-0: 0px 1px 2px -1px rgba(0, 0, 0, 0.1);
   --effect-shadow-sm-1: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
