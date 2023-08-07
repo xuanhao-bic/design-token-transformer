@@ -1,6 +1,6 @@
 {
   "name": "@beincom/design-token-transformer",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Base repo to transform json design tokens from the figma design token plugin via amazon style directory.",
   "main": "index.js",
   "dependencies": {
