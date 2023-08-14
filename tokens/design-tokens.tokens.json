@@ -1838,7 +1838,7 @@
                 }
             }
         },
-        "action list": {
+        "action-list": {
             "fg-default": {
                 "description": "",
                 "type": "color",
