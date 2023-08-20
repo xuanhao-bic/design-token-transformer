@@ -1,0 +1,12 @@
+.github
+.vscode
+src
+.eslintignore
+.eslintrc.cjs
+.gitignore
+.npmignore
+.prettierrc
+.node_modules
+.transformTokens.js
+.tokens
+.tests
