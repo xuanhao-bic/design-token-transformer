@@ -24,13 +24,13 @@ function filterTokensByType(types, tokens) {
               acc[cur.path.join('.')] = `var(--${cur.name})`
               // font size and line height
           } else if (cur.type === 'custom-fontStyle') {
-              acc[cur.path.join('.')] = [
-                  `${cur.value.fontSize}px`,
-                  {
-                      lineHeight: `${cur.value.lineHeight}px`,
-                      fontWeight: cur.value.fontWeight,
-                  },
-              ]
+              // acc[cur.path.join('.')] = [
+              //     `${cur.value.fontSize}px`,
+              //     {
+              //         lineHeight: `${cur.value.lineHeight}px`,
+              //         fontWeight: cur.value.fontWeight,
+              //     },
+              // ]
           } else {
               acc[cur.path.join('.')] = `${cur.value}`
           }
