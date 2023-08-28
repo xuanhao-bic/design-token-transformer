@@ -91,4 +91,6 @@ module.exports = {
     createArray,
     filterTokensByType,
     createTailwindTokens,
+    convertSomeTypeToKebabCase,
+    deepen,
 }

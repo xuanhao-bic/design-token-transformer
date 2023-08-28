@@ -1,6 +1,7 @@
 const StyleDictionary = require('style-dictionary')
 const deepMerge = require('deepmerge')
 const webConfig = require('./src/web/index.js')
+const mobileConfig = require('./src/mobile/index.js')
 const { createColorTailwindByType } = require('./fns.js')
 
 StyleDictionary.registerTransform({
@@ -46,7 +47,7 @@ StyleDictionary.registerFilter({
 })
 
 const StyleDictionaryExtended = StyleDictionary.extend({
-    ...deepMerge.all([webConfig]),
+    ...deepMerge.all([webConfig, mobileConfig]),
     source: ['tokens/*.json'],
     platforms: {
         scss: {
@@ -84,6 +85,20 @@ const StyleDictionaryExtended = StyleDictionary.extend({
                 },
             ],
         },
+        reactNative: {
+            transformGroup: 'custom/react-native',
+            buildPath: 'build/mobile/',
+            files: [
+                {
+                    destination: 'color.json',
+                    format: 'createReactNativeTokens',
+                },
+                {
+                    destination: 'colorTypes.ts',
+                    format: 'createTokensTypes',
+                }
+            ],
+        }
     },
 })
 // console.log("StyleDictionaryExtended", StyleDictionaryExtended);
