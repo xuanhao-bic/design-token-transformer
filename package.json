@@ -6,24 +6,21 @@
     "files": [
         "dist"
     ],
-    "dependencies": {
-        "@ctrl/tinycolor": "3.4.0",
-        "rollup": "^3.28.1",
-        "style-dictionary": "3",
-        "tsup": "^7.2.0",
-        "typescript": "^5.2.2"
-    },
     "devDependencies": {
-        "@types/jest": "27.0.3",
+        "@ctrl/tinycolor": "3.4.0",
         "deepmerge": "4.3.1",
         "jest": "27.0.6",
         "prettier": "2.5.1",
-        "ts-jest": "27.0.3"
+        "rollup": "^3.28.1",
+        "style-dictionary": "3",
+        "tsup": "^7.2.0",
+        "typescript": "^5.2.2",
+        "rimraf": "5.0.1"
     },
     "scripts": {
         "start": "npm run transform-tokens",
-        "build": "node ./transformTokens.js && tsup",
-        "test": "jest tests --coverage=false"
+        "build": "rimraf dist && node ./transformTokens.js && tsup && npm run copy-css",
+        "copy-css": "cp -r ./build/**/*.css ./build/**/*.scss ./dist"
     },
     "repository": {
         "type": "git",
