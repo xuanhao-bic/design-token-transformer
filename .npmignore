@@ -10,3 +10,5 @@ src
 .transformTokens.js
 .tokens
 .tests
+.build
+.tsup.config.ts

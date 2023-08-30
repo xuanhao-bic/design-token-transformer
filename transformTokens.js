@@ -96,9 +96,9 @@ const StyleDictionaryExtended = StyleDictionary.extend({
                 {
                     destination: 'colorTypes.ts',
                     format: 'createTokensTypes',
-                }
+                },
             ],
-        }
+        },
     },
 })
 // console.log("StyleDictionaryExtended", StyleDictionaryExtended);

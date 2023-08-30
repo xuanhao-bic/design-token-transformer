@@ -2,21 +2,27 @@
     "name": "@beincom/design-token-transformer",
     "version": "1.0.12",
     "description": "Base repo to transform json design tokens from the figma design token plugin via amazon style directory.",
-    "main": "index.js",
+    "main": "./dist/index.js",
+    "files": [
+        "dist"
+    ],
     "dependencies": {
         "@ctrl/tinycolor": "3.4.0",
-        "style-dictionary": "3"
+        "rollup": "^3.28.1",
+        "style-dictionary": "3",
+        "tsup": "^7.2.0",
+        "typescript": "^5.2.2"
     },
     "devDependencies": {
         "@types/jest": "27.0.3",
         "deepmerge": "4.3.1",
         "jest": "27.0.6",
-        "ts-jest": "27.0.3",
-        "prettier": "2.5.1"
+        "prettier": "2.5.1",
+        "ts-jest": "27.0.3"
     },
     "scripts": {
         "start": "npm run transform-tokens",
-        "build": "node ./transformTokens.js",
+        "build": "node ./transformTokens.js && tsup",
         "test": "jest tests --coverage=false"
     },
     "repository": {
